@@ -1,0 +1,317 @@
+.opage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+.oscroll {
+  flex: 1;
+  min-height: 0;
+  padding: 24rpx 24rpx 0;
+}
+
+/* 取餐号票根 */
+.ticket {
+  background: linear-gradient(160deg, #33251c, #5b3f2c);
+  border-radius: 28rpx;
+  padding: 40rpx 32rpx 32rpx;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 24rpx;
+    right: 24rpx;
+    bottom: 92rpx;
+    border-top: 2rpx dashed rgba(255, 255, 255, 0.22);
+  }
+}
+
+.ticket-label {
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 6rpx;
+}
+
+.ticket-no {
+  font-size: 96rpx;
+  font-weight: 800;
+  letter-spacing: 8rpx;
+  line-height: 1.2;
+  margin: 8rpx 0 4rpx;
+  font-family: 'DIN Alternate', -apple-system, sans-serif;
+}
+
+.ticket-sub {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ticket-status {
+  margin-top: 28rpx;
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.steps {
+  display: flex;
+  background: var(--card);
+  border-radius: 24rpx;
+  padding: 28rpx 8rpx;
+  margin-top: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(43, 33, 26, 0.04);
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 9rpx;
+    left: 50%;
+    width: 100%;
+    height: 2rpx;
+    background: var(--line);
+  }
+
+  &:last-child::before {
+    display: none;
+  }
+
+  &.on::before {
+    background: #c9ae94;
+  }
+}
+
+.step-dot {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background: var(--line);
+  margin: 0 auto 10rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.step.on .step-dot {
+  background: var(--brand);
+  box-shadow: 0 0 0 6rpx rgba(184, 115, 82, 0.15);
+}
+
+.step-label {
+  font-size: 24rpx;
+  color: var(--ink-3);
+}
+
+.step.on .step-label {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.step-hint {
+  font-size: 18rpx;
+  color: var(--ink-3);
+  margin-top: 2rpx;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 24rpx;
+  padding: 28rpx;
+  margin-top: 20rpx;
+  box-shadow: 0 4rpx 16rpx rgba(43, 33, 26, 0.04);
+}
+
+.card-title {
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8rpx;
+}
+
+.small {
+  font-size: 22rpx;
+}
+
+.oitem {
+  display: flex;
+  align-items: center;
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid var(--line);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+}
+
+.oemoji {
+  width: 84rpx;
+  height: 84rpx;
+  border-radius: 18rpx;
+  background: linear-gradient(140deg, #f6e8d8, #e9d2b7);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  margin-right: 18rpx;
+  flex-shrink: 0;
+}
+
+.oname {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.ospec {
+  font-size: 22rpx;
+  color: var(--ink-3);
+  margin-top: 2rpx;
+}
+
+.oright {
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 16rpx;
+}
+
+.oqty {
+  font-size: 22rpx;
+  color: var(--ink-3);
+}
+
+.oprice {
+  font-size: 26rpx;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.osum {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  gap: 12rpx;
+  padding-top: 18rpx;
+  border-top: 1rpx dashed var(--line);
+}
+
+.osum-num {
+  font-size: 36rpx;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.oremark {
+  font-size: 24rpx;
+  color: var(--ink-2);
+  margin-top: 12rpx;
+  line-height: 1.5;
+}
+
+.pay-chip {
+  font-size: 20rpx;
+  padding: 4rpx 14rpx;
+  border-radius: 999rpx;
+  background: #f6e3d3;
+  color: #a95f33;
+
+  &.paid {
+    background: #e2f0e7;
+    color: var(--ok);
+  }
+}
+
+.pay-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 16rpx 0 20rpx;
+}
+
+.pay-amount {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.pay-btn {
+  height: 88rpx;
+  border-radius: 999rpx;
+  background: #2b211a;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pay-done {
+  height: 88rpx;
+  border-radius: 999rpx;
+  background: #eaf3ee;
+  color: var(--ok);
+  font-size: 28rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions {
+  display: flex;
+  gap: 20rpx;
+  margin-top: 28rpx;
+}
+
+.action-btn {
+  flex: 1;
+  height: 88rpx;
+  border-radius: 999rpx;
+  background: #2b211a;
+  color: #fff;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.ghost {
+    background: transparent;
+    border: 2rpx solid #d9cbbb;
+    color: var(--ink-2);
+  }
+}
+
+.oplaceholder {
+  height: 60rpx;
+}
+
+.missing {
+  padding: 120rpx 0;
+  text-align: center;
+  color: var(--ink-3);
+}
+
+.back-btn {
+  margin: 0 60rpx;
+  height: 88rpx;
+  border-radius: 999rpx;
+  background: #2b211a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

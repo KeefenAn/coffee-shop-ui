@@ -1,0 +1,154 @@
+.cs-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(24, 16, 12, 0.45);
+  z-index: 800;
+  display: flex;
+  align-items: flex-end;
+}
+
+.cs-sheet {
+  width: 100%;
+  background: var(--card);
+  border-radius: 32rpx 32rpx 0 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+  padding-bottom: 32rpx;
+}
+
+.cs-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28rpx 32rpx 16rpx;
+}
+
+.cs-title {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.cs-clear {
+  font-size: 24rpx;
+  color: var(--ink-3);
+}
+
+.cs-empty {
+  padding: 64rpx 32rpx;
+  text-align: center;
+  color: var(--ink-3);
+  font-size: 26rpx;
+}
+
+.cs-list {
+  max-height: 42vh;
+  padding: 0 32rpx;
+}
+
+.cs-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid var(--line);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.cs-emoji {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 20rpx;
+  background: linear-gradient(140deg, #f3e3d2, #e7d0b8);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44rpx;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.cs-name {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.cs-spec {
+  font-size: 22rpx;
+  color: var(--ink-3);
+  margin-top: 2rpx;
+}
+
+.cs-price {
+  font-size: 26rpx;
+  color: var(--brand);
+  font-weight: 600;
+  margin-top: 4rpx;
+}
+
+.cs-stepper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cs-btn {
+  width: 52rpx;
+  height: 52rpx;
+  border-radius: 50%;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.cs-num {
+  min-width: 56rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.cs-foot {
+  display: flex;
+  align-items: center;
+  gap: 24rpx;
+  padding: 20rpx 32rpx 0;
+}
+
+.cs-total {
+  flex-shrink: 0;
+}
+
+.cs-total-num {
+  color: var(--brand);
+  font-size: 38rpx;
+  font-weight: 700;
+}
+
+.cs-go {
+  flex: 1;
+  height: 84rpx;
+  border-radius: 999rpx;
+  background: #2b211a;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.disabled {
+    background: #d8cec2;
+  }
+}

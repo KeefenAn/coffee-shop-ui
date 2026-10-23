@@ -1,0 +1,17 @@
+nodeLinker: hoisted
+shamefullyHoist: true
+strictPeerDependencies: false
+autoInstallPeers: true
+allowBuilds:
+  '@swc/core': true
+  '@tarojs/binding': true
+  esbuild: true
+  sass: true
+  '@parcel/watcher': true
+  core-js: true
+  core-js-pure: true
+  swiper: true
+
+fetchTimeout: 600000
+fetchRetries: 5
+networkConcurrency: 4

@@ -1,0 +1,65 @@
+page,
+body {
+  --bg: #f6f1ea;
+  --bg-2: #efe7dc;
+  --card: #ffffff;
+  --ink: #2b211a;
+  --ink-2: #7c6a5c;
+  --ink-3: #b5a695;
+  --brand: #b87352;
+  --brand-dark: #6f4a2e;
+  --gold: #d9a05b;
+  --line: #efe5d9;
+  --ok: #4e8c6a;
+  --danger: #c0563f;
+
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue',
+    'Microsoft YaHei', sans-serif;
+  font-size: 28rpx;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+view,
+text,
+scroll-view {
+  box-sizing: border-box;
+}
+
+/* 通用小工具类 */
+.row {
+  display: flex;
+  align-items: center;
+}
+.between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.grow {
+  flex: 1;
+  min-width: 0;
+}
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ellipsis-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.muted {
+  color: var(--ink-2);
+}
+.faint {
+  color: var(--ink-3);
+}

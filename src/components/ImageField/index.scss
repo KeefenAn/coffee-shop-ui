@@ -1,0 +1,125 @@
+.ifield {
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid var(--line);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.ifield-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16rpx;
+  margin-bottom: 16rpx;
+}
+
+.ifield-label {
+  font-size: 26rpx;
+  color: var(--ink);
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ifield-hint {
+  font-size: 20rpx;
+  color: var(--ink-3);
+  text-align: right;
+  flex: 1;
+  min-width: 0;
+}
+
+.ifield-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 24rpx;
+}
+
+.ifield-preview {
+  flex-shrink: 0;
+  border-radius: 16rpx;
+  background: linear-gradient(140deg, #efe4d6, #e2cdb5);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1rpx solid var(--line);
+
+  &.square {
+    width: 160rpx;
+    height: 160rpx;
+  }
+
+  &.wide {
+    width: 300rpx;
+    height: 168rpx;
+  }
+}
+
+.ifield-ph {
+  font-size: 44rpx;
+  color: #b9a58d;
+}
+
+.ifield-actions {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+  align-items: flex-start;
+  padding-top: 6rpx;
+}
+
+.ifield-btn {
+  padding: 12rpx 28rpx;
+  border-radius: 999rpx;
+  font-size: 24rpx;
+  white-space: nowrap;
+
+  &.primary {
+    background: #2b211a;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  &.busy {
+    background: #8d7c6b;
+  }
+
+  &.ghost {
+    background: transparent;
+    border: 1rpx solid #dccfbf;
+    color: var(--ink-2);
+  }
+}
+
+.ifield-size {
+  font-size: 20rpx;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+/* 宽幅背景图：预览占满一行，按钮在下方 */
+.ifield-wide {
+  .ifield-body {
+    flex-direction: column;
+    gap: 16rpx;
+  }
+
+  .ifield-preview {
+    width: 100%;
+    height: 200rpx;
+  }
+
+  .ifield-actions {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-top: 0;
+  }
+}
